@@ -1,0 +1,47 @@
+<app-navbar [pageName]="'Add Movie'"></app-navbar>
+<ion-content>
+    <div>
+        <form>
+            <ion-item>
+                <ion-label>Title</ion-label>
+                <ion-input type="text" [(ngModel)]="movie.title" name="title"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Description</ion-label>
+                <ion-input type="text" [(ngModel)]="movie.description" name="description"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Gender</ion-label>
+                <ion-input type="text" [(ngModel)]="movie.gender" name="gender"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>DurationInMinutes</ion-label>
+                <ion-input type="number" [(ngModel)]="movie.durationInMinutes" name="durationInMinutes"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>YearOfRelease</ion-label>
+                <ion-input type="text" [(ngModel)]="movie.yearOfRelease" name="yearOfRelease"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Director</ion-label>
+                <ion-input type="text" [(ngModel)]="movie.director" name="director"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>DateAdded</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY MM DD"  [(ngModel)]="movie.dateAdded" name="dateAdded"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Rating</ion-label>
+                <ion-input type="number" [(ngModel)]="movie.rating" name="rating"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Watched</ion-label>
+                <ion-checkbox type="checked" [(ngModel)]="movie.watched" name="watched"></ion-checkbox>
+            </ion-item>
+        </form>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-button expand="block" (click)="addMovie()">Add movie</ion-button>
+    <ion-button expand="block" color="secondary" [routerLink]="'/movies'">Back to movies</ion-button>
+</ion-footer>
